@@ -18,6 +18,15 @@ using Cet.Develop.NETMF.IO.Protocols;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+/**
+ * 09/Apr/2012: 
+ *  Added an optional parameter to the constructor, so that the
+ *  IncomingData reader can be initialized. This allows to
+ *  create transport driver outside the Cet.Develop.NETMF.IO
+ *  assembly (the IncomingData property set is internal).
+ *  Thanks to: http://www.codeplex.com/site/users/view/gralinpl
+ **/
 namespace Cet.Develop.NETMF.IO
 {
     /// <summary>
@@ -26,9 +35,12 @@ namespace Cet.Develop.NETMF.IO
     public class ServerCommData
         : CommDataBase
     {
-        public ServerCommData(IProtocol protocol)
+        public ServerCommData(
+            IProtocol protocol, 
+            ByteArrayReader incomingData = null)
             : base(protocol)
         {
+            this.IncomingData = incomingData;
         }
     }
 }

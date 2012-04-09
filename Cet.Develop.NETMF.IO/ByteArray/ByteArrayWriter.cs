@@ -17,6 +17,11 @@ using System.Collections;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+/**
+ * 09/Apr/2012:
+ *  Added the ToArray method.
+ **/
 namespace Cet.Develop.NETMF.IO
 {
     /// <summary>
@@ -95,6 +100,17 @@ namespace Cet.Develop.NETMF.IO
         public ByteArrayReader ToReader()
         {
             return new ByteArrayReader(((IByteArray)this).Data);
+        }
+
+
+
+        /// <summary>
+        /// Create a byte-array using the current writer as source
+        /// </summary>
+        /// <returns></returns>
+        public byte[] ToArray()
+        {
+            return ((IByteArray)this).Data;
         }
 
 

@@ -17,29 +17,18 @@ using Microsoft.SPOT.Hardware;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+/**
+ * 09/Apr/2012:
+ *  The original class ModbusTcpCodec has been splitted in two parts,
+ *  a base and its derivation. In this way, the base ModbusCodecBase
+ *  can be shared for both TCP and RTU mode
+ **/
 namespace Cet.Develop.NETMF.IO.Protocols
 {
     public class ModbusTcpCodec
-        : IProtocolCodec
+        : ModbusCodecBase, IProtocolCodec
     {
-        static ModbusTcpCodec()
-        {
-            //fill the local array with the curretly supported commands
-            CommandCodecs[ModbusCommand.FuncReadMultipleRegisters] = new ModbusTcpCodecReadMultipleRegisters();
-            CommandCodecs[ModbusCommand.FuncWriteMultipleRegisters] = new ModbusTcpCodecWriteMultipleRegisters();
-            CommandCodecs[ModbusCommand.FuncReadCoils] = new ModbusTcpCodecReadMultipleDiscretes();
-            CommandCodecs[ModbusCommand.FuncReadInputDiscretes] = new ModbusTcpCodecReadMultipleDiscretes();
-            CommandCodecs[ModbusCommand.FuncReadInputRegisters] = new ModbusTcpCodecReadMultipleRegisters();
-            CommandCodecs[ModbusCommand.FuncWriteCoil] = new ModbusTcpCodecWriteSingleDiscrete();
-            CommandCodecs[ModbusCommand.FuncWriteSingleRegister] = new ModbusTcpCodecWriteSingleRegister();
-        }
-
-
-
-        private static readonly ModbusCommandCodec[] CommandCodecs = new ModbusCommandCodec[24];
-
-
-
         #region IProtocolCodec members
 
         void IProtocolCodec.ClientEncode(CommDataBase data)
@@ -57,7 +46,7 @@ namespace Cet.Develop.NETMF.IO.Protocols
             //calculate length field
             var length = 2 + body.Length;
 
-            //crea un writer per raccogliere i dati utili
+            //create a writer for the outgoing data
             var writer = new ByteArrayWriter();
 
             //transaction-id (always zero)
@@ -159,7 +148,7 @@ namespace Cet.Develop.NETMF.IO.Protocols
                 ? 2 + body.Length
                 : 3;
 
-            //crea un writer per raccogliere i dati utili
+            //create a writer for the outgoing data
             var writer = new ByteArrayWriter();
 
             //transaction-id
@@ -258,98 +247,6 @@ namespace Cet.Develop.NETMF.IO.Protocols
         }
 
         #endregion
-
-
-
-        /// <summary>
-        /// Append the typical header for a request command (master-side)
-        /// </summary>
-        /// <param name="command"></param>
-        /// <param name="body"></param>
-        internal static void PushRequestHeader(
-            ModbusCommand command,
-            ByteArrayWriter body)
-        {
-            body.WriteUInt16BE((ushort)command.Offset);
-            body.WriteInt16BE((short)command.Count);
-        }
-
-
-
-        /// <summary>
-        /// Extract the typical header for a request command (server-side)
-        /// </summary>
-        /// <param name="command"></param>
-        /// <param name="body"></param>
-        internal static void PopRequestHeader(
-            ModbusCommand command,
-            ByteArrayReader body)
-        {
-            command.Offset = body.ReadUInt16BE();
-            command.Count = body.ReadInt16BE();
-        }
-
-
-
-        /// <summary>
-        /// Helper for packing the discrete data outgoing as a bit-array
-        /// </summary>
-        /// <param name="command"></param>
-        /// <param name="body"></param>
-        internal static void PushDiscretes(
-            ModbusCommand command,
-            ByteArrayWriter body)
-        {
-            var count = command.Count;
-            body.WriteByte((byte)((count + 7) / 8));
-
-            int i = 0;
-            int cell = 0;
-            for (int k = 0; k < count; k++)
-            {
-                if (command.Data[k] != 0)
-                    cell |= (1 << i);
-
-                if (++i == 8)
-                {
-                    body.WriteByte((byte)cell);
-                    i = 0;
-                    cell = 0;
-                }
-            }
-
-            if (i > 0)
-                body.WriteByte((byte)cell);
-        }
-
-
-
-        /// <summary>
-        /// Helper for unpacking discrete data incoming as a bit-array
-        /// </summary>
-        /// <param name="command"></param>
-        /// <param name="body"></param>
-        internal static void PopDiscretes(
-            ModbusCommand command,
-            ByteArrayReader body)
-        {
-            var byteCount = body.ReadByte();
-
-            var count = command.Count;
-            command.Data = new ushort[count];
-
-            int k = 0;
-            while (count > 0)
-            {
-                byteCount--;
-                int cell = body.ReadByte();
-
-                int n = count <= 8 ? count : 8;
-                count -= n;
-                for (int i = 0; i < n; i++)
-                    command.Data[k++] = (ushort)(cell & (1 << i));
-            }
-        }
 
     }
 }

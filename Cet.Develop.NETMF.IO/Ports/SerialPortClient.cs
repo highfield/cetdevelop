@@ -18,6 +18,12 @@ using System.Threading;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+/**
+ * 09/Apr/2012
+ *  Commented out the port setting, because Netduino does not
+ *  allow to change it after the port has been opened
+ **/
 namespace Cet.Develop.NETMF.IO
 {
     /// <summary>
@@ -52,10 +58,10 @@ namespace Cet.Develop.NETMF.IO
             lock (this.Port)
             {
                 //set the proper parameters to the port
-                this.Port.BaudRate = this.Setting.BaudRate;
-                this.Port.Parity = this.Setting.Parity;
-                this.Port.DataBits = this.Setting.DataBits;
-                this.Port.StopBits = this.Setting.StopBits;
+                //this.Port.BaudRate = this.Setting.BaudRate;
+                //this.Port.Parity = this.Setting.Parity;
+                //this.Port.DataBits = this.Setting.DataBits;
+                //this.Port.StopBits = this.Setting.StopBits;
 
                 //convert the request data as an ordinary byte array
                 byte[] outgoing = data

@@ -1,5 +1,6 @@
-﻿#define MASTER_TCP
+﻿//#define MASTER_TCP
 //#define MASTER_UDP
+#define MASTER_RTU
 //#define SLAVE_TCP
 //#define SLAVE_UDP
 
@@ -10,6 +11,7 @@ using System.Threading;
 using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;
 using Microsoft.SPOT.Net.NetworkInformation;
+using System.IO.Ports;
 
 using SecretLabs.NETMF.Hardware;
 using SecretLabs.NETMF.Hardware.NetduinoPlus;
@@ -31,6 +33,11 @@ using Cet.Develop.NETMF.IO.Protocols;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+/**
+ * 09/Apr/2012
+ *  Changed the pin assignment to fit the UART test
+ **/
 namespace Cet.Develop.NETMF.IO
 {
     public class Program
@@ -52,15 +59,15 @@ namespace Cet.Develop.NETMF.IO
             Debug.Print("The local IP address of your Netduino Plus is " + localip);
 
             //define coils and inputs
-            _inputs[0] = new InputPort(Pins.GPIO_PIN_D0, true, Port.ResistorMode.PullUp);
-            _inputs[1] = new InputPort(Pins.GPIO_PIN_D1, true, Port.ResistorMode.PullUp);
-            _inputs[2] = new InputPort(Pins.GPIO_PIN_D2, true, Port.ResistorMode.PullUp);
-            _inputs[3] = new InputPort(Pins.GPIO_PIN_D3, true, Port.ResistorMode.PullUp);
+            _inputs[0] = new InputPort(Pins.GPIO_PIN_D4, true, Port.ResistorMode.PullUp);
+            _inputs[1] = new InputPort(Pins.GPIO_PIN_D5, true, Port.ResistorMode.PullUp);
+            _inputs[2] = new InputPort(Pins.GPIO_PIN_D6, true, Port.ResistorMode.PullUp);
+            _inputs[3] = new InputPort(Pins.GPIO_PIN_D7, true, Port.ResistorMode.PullUp);
 
-            _coils[0] = new OutputPort(Pins.GPIO_PIN_D4, false);
-            _coils[1] = new OutputPort(Pins.GPIO_PIN_D5, false);
-            _coils[2] = new OutputPort(Pins.GPIO_PIN_D6, false);
-            _coils[3] = new OutputPort(Pins.GPIO_PIN_D7, false);
+            _coils[0] = new OutputPort(Pins.GPIO_PIN_D8, false);
+            _coils[1] = new OutputPort(Pins.GPIO_PIN_D9, false);
+            _coils[2] = new OutputPort(Pins.GPIO_PIN_D10, false);
+            _coils[3] = new OutputPort(Pins.GPIO_PIN_D11, false);
 
 #if MASTER_TCP
             //create a TCP socket
@@ -155,6 +162,55 @@ namespace Cet.Develop.NETMF.IO
                         Debug.Print("Success!");
                         for (int i = 0; i < command.Count; i++)
                             Debug.Print("Reg#" + i + "=" + command.Data[i]);
+                    }
+                    else
+                    {
+                        //some error
+                        Debug.Print("Error=" + command.ExceptionCode);
+                    }
+
+                    //just a small delay
+                    Thread.Sleep(1000);
+                }
+            }
+#endif
+
+#if MASTER_RTU
+            //create an UART port
+            using (var uart = new SerialPort("COM2", 38400, Parity.Even, 8))
+            {
+                //open the serial port
+                uart.Open();
+
+                var prm = new SerialPortParams("38400,E,8,1");
+
+                //create a wrapper around the uart
+                ICommClient portClient = uart
+                    .GetClient(prm);
+
+                //create a client driver
+                var driver = new ModbusClient(new ModbusRtuCodec());
+                driver.Address = 1;
+
+                while (true)
+                {
+                    //compose the Modbus command to be submitted
+                    var command = new ModbusCommand(ModbusCommand.FuncWriteMultipleRegisters);
+                    command.Offset = 49;
+                    command.Count = 4;
+
+                    //attach the Netduino's input values as data
+                    command.Data = new ushort[4];
+                    for (int i = 0; i < 4; i++)
+                        command.Data[i] = (ushort)(_inputs[i].Read() ? 0 : 1);
+
+                    //execute the command synchronously
+                    CommResponse result = driver
+                        .ExecuteGeneric(portClient, command);
+
+                    if (result.Status == CommResponse.Ack)
+                    {
+                        //command successfully
                     }
                     else
                     {
