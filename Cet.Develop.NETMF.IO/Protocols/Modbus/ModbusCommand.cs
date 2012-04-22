@@ -17,6 +17,11 @@ using Microsoft.SPOT.Hardware;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+/**
+ * 20/Apr/2012
+ *  Added function code for "force multiple coils" command
+ **/
 namespace Cet.Develop.NETMF.IO.Protocols
 {
     /// <summary>
@@ -41,6 +46,13 @@ namespace Cet.Develop.NETMF.IO.Protocols
         public const byte FuncWriteCoil = 5;
         public const byte FuncWriteSingleRegister = 6;
         public const byte FuncReadExceptionStatus = 7;
+
+
+
+        /**
+         * Class 2 functions
+         **/
+        public const byte FuncForceMultipleCoils = 15;
 
 
 

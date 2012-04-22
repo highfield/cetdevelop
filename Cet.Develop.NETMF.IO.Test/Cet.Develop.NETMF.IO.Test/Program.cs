@@ -1,7 +1,7 @@
 ﻿//#define MASTER_TCP
 //#define MASTER_UDP
-#define MASTER_RTU
-//#define SLAVE_TCP
+//#define MASTER_RTU
+#define SLAVE_TCP
 //#define SLAVE_UDP
 
 using System;
@@ -37,13 +37,18 @@ using Cet.Develop.NETMF.IO.Protocols;
 /**
  * 09/Apr/2012
  *  Changed the pin assignment to fit the UART test
+ *  
+ * 20/Apr/2012
+ *  Added the "force multiple coils" command handler
+ *  Corrected some imperfection
  **/
 namespace Cet.Develop.NETMF.IO
 {
     public class Program
     {
-        private static InputPort[] _inputs = new InputPort[4];
-        private static OutputPort[] _coils = new OutputPort[4];
+        private static InputPort[] _inputs = new InputPort[8];
+        private static OutputPort[] _coils = new OutputPort[6];
+        private static AnalogInput[] _analogs = new AnalogInput[6];
 
 
 
@@ -58,16 +63,29 @@ namespace Cet.Develop.NETMF.IO
 
             Debug.Print("The local IP address of your Netduino Plus is " + localip);
 
-            //define coils and inputs
-            _inputs[0] = new InputPort(Pins.GPIO_PIN_D4, true, Port.ResistorMode.PullUp);
-            _inputs[1] = new InputPort(Pins.GPIO_PIN_D5, true, Port.ResistorMode.PullUp);
-            _inputs[2] = new InputPort(Pins.GPIO_PIN_D6, true, Port.ResistorMode.PullUp);
-            _inputs[3] = new InputPort(Pins.GPIO_PIN_D7, true, Port.ResistorMode.PullUp);
+            //define coils, inputs, and analogs
+            _inputs[0] = new InputPort(Pins.GPIO_PIN_D0, true, Port.ResistorMode.PullUp);
+            _inputs[1] = new InputPort(Pins.GPIO_PIN_D1, true, Port.ResistorMode.PullUp);
+            _inputs[2] = new InputPort(Pins.GPIO_PIN_D2, true, Port.ResistorMode.PullUp);
+            _inputs[3] = new InputPort(Pins.GPIO_PIN_D3, true, Port.ResistorMode.PullUp);
+            _inputs[4] = new InputPort(Pins.GPIO_PIN_D4, true, Port.ResistorMode.PullUp);
+            _inputs[5] = new InputPort(Pins.GPIO_PIN_D5, true, Port.ResistorMode.PullUp);
+            _inputs[6] = new InputPort(Pins.GPIO_PIN_D6, true, Port.ResistorMode.PullUp);
+            _inputs[7] = new InputPort(Pins.GPIO_PIN_D7, true, Port.ResistorMode.PullUp);
 
             _coils[0] = new OutputPort(Pins.GPIO_PIN_D8, false);
             _coils[1] = new OutputPort(Pins.GPIO_PIN_D9, false);
             _coils[2] = new OutputPort(Pins.GPIO_PIN_D10, false);
             _coils[3] = new OutputPort(Pins.GPIO_PIN_D11, false);
+            _coils[4] = new OutputPort(Pins.GPIO_PIN_D12, false);
+            _coils[5] = new OutputPort(Pins.GPIO_PIN_D13, false);
+
+            _analogs[0] = new AnalogInput(Pins.GPIO_PIN_A0);
+            _analogs[1] = new AnalogInput(Pins.GPIO_PIN_A1);
+            _analogs[2] = new AnalogInput(Pins.GPIO_PIN_A2);
+            _analogs[3] = new AnalogInput(Pins.GPIO_PIN_A3);
+            _analogs[4] = new AnalogInput(Pins.GPIO_PIN_A4);
+            _analogs[5] = new AnalogInput(Pins.GPIO_PIN_A5);
 
 #if MASTER_TCP
             //create a TCP socket
@@ -230,6 +248,7 @@ namespace Cet.Develop.NETMF.IO
             {
                 //place it as listener on the port 502 (standard Modbus)
                 var ept = new IPEndPoint(IPAddress.Any, 502);
+                socket.Bind(ept);
                 socket.Listen(10);
 
                 //create a server driver
@@ -285,14 +304,14 @@ namespace Cet.Develop.NETMF.IO
             switch (command.FunctionCode)
             {
                 case ModbusCommand.FuncReadCoils:
-                    for (int i = 0; i < _coils.Length; i++)
-                        command.Data[i] = (ushort)(_coils[i].Read() ? 1 : 0);
+                    for (int i = 0; i < command.Count; i++)
+                        command.Data[i] = (ushort)(_coils[i + command.Offset].Read() ? 1 : 0);
                     break;
 
 
                 case ModbusCommand.FuncReadInputDiscretes:
-                    for (int i = 0; i < _inputs.Length; i++)
-                        command.Data[i] = (ushort)(_inputs[i].Read() ? 1 : 0);
+                    for (int i = 0; i < command.Count; i++)
+                        command.Data[i] = (ushort)(_inputs[i + command.Offset].Read() ? 1 : 0);
                     break;
 
 
@@ -302,11 +321,22 @@ namespace Cet.Develop.NETMF.IO
                     break;
 
 
+                case ModbusCommand.FuncForceMultipleCoils:
+                    for (int i = 0; i < command.Count; i++)
+                        _coils[i + command.Offset].Write(command.Data[i] != 0);
+                    break;
+
+
+                case ModbusCommand.FuncReadInputRegisters:
+                    for (int i = 0; i < command.Count; i++)
+                        command.Data[i] = (ushort)_analogs[i + command.Offset].Read();
+                    break;
+
+
                 case ModbusCommand.FuncReadMultipleRegisters:
                 case ModbusCommand.FuncWriteMultipleRegisters:
                 case ModbusCommand.FuncWriteSingleRegister:
                 case ModbusCommand.FuncReadExceptionStatus:
-                case ModbusCommand.FuncReadInputRegisters:
                     //TODO
                     break;
 
