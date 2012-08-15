@@ -49,6 +49,7 @@
     <Compile Include="Ports\SerialPortClient.cs" />
     <Compile Include="Ports\SerialPortExtensions.cs" />
     <Compile Include="Ports\SerialPortParams.cs" />
+    <Compile Include="Ports\SerialPortServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Protocols\Modbus\Codecs\ModbusCodecForceMultipleCoils.cs" />
     <Compile Include="Protocols\Modbus\ModbusRtuCodec.cs" />

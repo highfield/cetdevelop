@@ -129,14 +129,114 @@ namespace Cet.Develop.NETMF.IO.Protocols
 
         void IProtocolCodec.ServerEncode(CommDataBase data)
         {
-            throw new NotImplementedException();
+            var server = (ModbusServer)data.OwnerProtocol;
+            var command = (ModbusCommand)data.UserData;
+            var fncode = command.FunctionCode;
+
+            //encode the command body, if applies
+            var body = new ByteArrayWriter();
+            var codec = CommandCodecs[fncode];
+            if (codec != null)
+                codec.ServerEncode(command, body);
+
+            //calculate length field
+            var length = (command.ExceptionCode == 0)
+                ? 2 + body.Length
+                : 3;
+
+            //create a writer for the outgoing data
+            var writer = new ByteArrayWriter();
+
+            //transaction-id
+            writer.WriteUInt16BE((ushort)command.TransId);
+
+            //unit identifier (address)
+            writer.WriteByte(server.Address);
+
+            if (command.ExceptionCode == 0)
+            {
+                //function code
+                writer.WriteByte(command.FunctionCode);
+
+                //body data
+                writer.WriteBytes(body);
+            }
+            else
+            {
+                //function code
+                writer.WriteByte((byte)(command.FunctionCode | 0x80));
+
+                //exception code
+                writer.WriteByte(command.ExceptionCode);
+            }
+
+            //CRC-16
+            ushort crc = ByteArrayHelpers.CalcCRC16(
+                writer.ToArray(),
+                0,
+                writer.Length);
+
+            writer.WriteInt16LE((short)crc);
+
+            data.OutgoingData = writer.ToReader();
         }
 
 
 
         CommResponse IProtocolCodec.ServerDecode(CommDataBase data)
         {
-            throw new NotImplementedException();
+            var server = (ModbusServer)data.OwnerProtocol;
+            var incoming = data.IncomingData;
+
+            //validate header first
+            var length = incoming.Length;
+            if (length < 4)
+                goto LabelUnknown;
+
+            //address
+            var address = incoming.ReadByte();
+
+            if (address == server.Address)
+            {
+                //function code
+                var fncode = incoming.ReadByte();
+
+                //create a new command
+                var command = new ModbusCommand(fncode);
+                data.UserData = command;
+
+                //
+                var body = new ByteArrayReader(incoming.ReadBytes(length - 4));
+
+                //calculate the CRC-16 over the received stream
+                ushort crc = ByteArrayHelpers.CalcCRC16(
+                    incoming.ToArray(),
+                    0,
+                    length - 2);
+
+                //validate the CRC-16
+                if (incoming.ReadInt16LE() == (short)crc)
+                {
+                    //encode the command body, if applies
+                    var codec = CommandCodecs[fncode];
+                    if (codec != null)
+                        codec.ServerDecode(command, body);
+
+                    return new CommResponse(
+                        data,
+                        CommResponse.Ack);
+                }
+            }
+
+            //exception
+            return new CommResponse(
+                data,
+                CommResponse.Ignore);
+
+        LabelUnknown:
+            return new CommResponse(
+                data,
+                CommResponse.Unknown);
         }
 
         #endregion

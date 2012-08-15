@@ -1,7 +1,8 @@
 ﻿//#define MASTER_TCP
 //#define MASTER_UDP
 //#define MASTER_RTU
-#define SLAVE_TCP
+#define SLAVE_RTU
+//#define SLAVE_TCP
 //#define SLAVE_UDP
 
 using System;
@@ -46,14 +47,15 @@ namespace Cet.Develop.NETMF.IO
 {
     public class Program
     {
-        private static InputPort[] _inputs = new InputPort[8];
-        private static OutputPort[] _coils = new OutputPort[6];
-        private static AnalogInput[] _analogs = new AnalogInput[6];
+        private static InputPort[] _inputs;
+        private static OutputPort[] _coils;
+        private static AnalogInput[] _analogs;
 
 
 
         public static void Main()
         {
+#if MASTER_TCP || MASTER_UDP || SLAVE_TCP || SLAVE_UDP
             //setup the board IP
             NetworkInterface.GetAllNetworkInterfaces()[0]
                 .EnableStaticIP("192.168.0.99", "255.255.255.0", "192.168.0.1");
@@ -64,6 +66,10 @@ namespace Cet.Develop.NETMF.IO
             Debug.Print("The local IP address of your Netduino Plus is " + localip);
 
             //define coils, inputs, and analogs
+            _inputs = new InputPort[8];
+            _coils = new OutputPort[6];
+            _analogs = new AnalogInput[6];
+
             _inputs[0] = new InputPort(Pins.GPIO_PIN_D0, true, Port.ResistorMode.PullUp);
             _inputs[1] = new InputPort(Pins.GPIO_PIN_D1, true, Port.ResistorMode.PullUp);
             _inputs[2] = new InputPort(Pins.GPIO_PIN_D2, true, Port.ResistorMode.PullUp);
@@ -86,6 +92,31 @@ namespace Cet.Develop.NETMF.IO
             _analogs[3] = new AnalogInput(Pins.GPIO_PIN_A3);
             _analogs[4] = new AnalogInput(Pins.GPIO_PIN_A4);
             _analogs[5] = new AnalogInput(Pins.GPIO_PIN_A5);
+#else
+            //define coils, inputs, and analogs
+            _inputs = new InputPort[4];
+            _coils = new OutputPort[6];
+            _analogs = new AnalogInput[6];
+
+            _inputs[0] = new InputPort(Pins.GPIO_PIN_D4, true, Port.ResistorMode.PullUp);
+            _inputs[1] = new InputPort(Pins.GPIO_PIN_D5, true, Port.ResistorMode.PullUp);
+            _inputs[2] = new InputPort(Pins.GPIO_PIN_D6, true, Port.ResistorMode.PullUp);
+            _inputs[3] = new InputPort(Pins.GPIO_PIN_D7, true, Port.ResistorMode.PullUp);
+
+            _coils[0] = new OutputPort(Pins.GPIO_PIN_D8, false);
+            _coils[1] = new OutputPort(Pins.GPIO_PIN_D9, false);
+            _coils[2] = new OutputPort(Pins.GPIO_PIN_D10, false);
+            _coils[3] = new OutputPort(Pins.GPIO_PIN_D11, false);
+            _coils[4] = new OutputPort(Pins.GPIO_PIN_D12, false);
+            _coils[5] = new OutputPort(Pins.GPIO_PIN_D13, false);
+
+            _analogs[0] = new AnalogInput(Pins.GPIO_PIN_A0);
+            _analogs[1] = new AnalogInput(Pins.GPIO_PIN_A1);
+            _analogs[2] = new AnalogInput(Pins.GPIO_PIN_A2);
+            _analogs[3] = new AnalogInput(Pins.GPIO_PIN_A3);
+            _analogs[4] = new AnalogInput(Pins.GPIO_PIN_A4);
+            _analogs[5] = new AnalogInput(Pins.GPIO_PIN_A5);
+#endif
 
 #if MASTER_TCP
             //create a TCP socket
@@ -239,6 +270,28 @@ namespace Cet.Develop.NETMF.IO
                     //just a small delay
                     Thread.Sleep(1000);
                 }
+            }
+#endif
+
+#if SLAVE_RTU
+            //create an UART port
+            using (var uart = new SerialPort("COM2", 38400, Parity.Even, 8))
+            {
+                //open the serial port
+                uart.Open();
+
+                var prm = new SerialPortParams("38400,E,8,1");
+
+                //create a server driver
+                var server = new ModbusServer(new ModbusRtuCodec());
+                server.Address = 1;
+
+                //listen for an incoming request
+                var listener = uart.GetListener(server);
+                listener.ServeCommand += new ServeCommandHandler(listener_ServeCommand);
+                listener.Start();
+
+                Thread.Sleep(Timeout.Infinite);
             }
 #endif
 

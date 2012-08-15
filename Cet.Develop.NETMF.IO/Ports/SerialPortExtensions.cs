@@ -3,6 +3,8 @@ using Microsoft.SPOT;
 using System.Threading;
 using System.IO.Ports;
 
+using Cet.Develop.NETMF.IO.Protocols;
+
 /*
  * Copyright 2012 Mario Vernari (http://cetdevelop.codeplex.com/)
  *
@@ -22,6 +24,12 @@ namespace Cet.Develop.NETMF.IO
 {
     public static class SerialPortExtensions
     {
+        /// <summary>
+        /// Return a concrete implementation of a serial port client
+        /// </summary>
+        /// <param name="port"></param>
+        /// <param name="setting"></param>
+        /// <returns></returns>
         public static ICommClient GetClient(
             this SerialPort port,
             SerialPortParams setting)
@@ -30,5 +38,24 @@ namespace Cet.Develop.NETMF.IO
                 port,
                 setting);
         }
+
+
+
+        /// <summary>
+        /// Return a concrete implementation of a serial port listener
+        /// </summary>
+        /// <param name="port"></param>
+        /// <param name="protocol"></param>
+        /// <returns></returns>
+        public static ICommServer GetListener(
+            this 
+            SerialPort port,
+            IProtocol protocol)
+        {
+            return new SerialPortServer(
+                port,
+                protocol);
+        }
+
     }
 }
