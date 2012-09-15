@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Cet.Develop.NETMF.IO.IpServer">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAABAAACAAACABAAARAABACAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Net\IpServer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Cet.Develop.NETMF.IO.TcpServer">
+    <Position X="2.5" Y="4" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Net\TcpServer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cet.Develop.NETMF.IO.UdpServer">
+    <Position X="4.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Net\UdpServer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Cet.Develop.NETMF.IO.ICommServer">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAACAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Comm\Server\ICommServer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
