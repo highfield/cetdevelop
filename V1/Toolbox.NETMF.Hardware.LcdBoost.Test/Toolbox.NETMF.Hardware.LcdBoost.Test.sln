@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toolbox.NETMF.Hardware.LcdBoost.Test", "Toolbox.NETMF.Hardware.LcdBoost.Test\Toolbox.NETMF.Hardware.LcdBoost.Test.csproj", "{9233DA49-E5C9-40F5-AD75-CC940E88282A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toolbox.NETMF.Hardware.LcdBoost", "..\Toolbox.NETMF.Hardware.LcdBoost\Toolbox.NETMF.Hardware.LcdBoost.csproj", "{354802D3-32BB-4DCC-95F2-4DC7F6CA9054}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toolbox.NETMF.Hardware.Port", "..\Toolbox.NETMF.Hardware.Port\Toolbox.NETMF.Hardware.Port.csproj", "{ADEFFFA6-5F7C-4683-B85E-04332C6B03A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9233DA49-E5C9-40F5-AD75-CC940E88282A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9233DA49-E5C9-40F5-AD75-CC940E88282A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9233DA49-E5C9-40F5-AD75-CC940E88282A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9233DA49-E5C9-40F5-AD75-CC940E88282A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9233DA49-E5C9-40F5-AD75-CC940E88282A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9233DA49-E5C9-40F5-AD75-CC940E88282A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{354802D3-32BB-4DCC-95F2-4DC7F6CA9054}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{354802D3-32BB-4DCC-95F2-4DC7F6CA9054}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{354802D3-32BB-4DCC-95F2-4DC7F6CA9054}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{354802D3-32BB-4DCC-95F2-4DC7F6CA9054}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADEFFFA6-5F7C-4683-B85E-04332C6B03A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADEFFFA6-5F7C-4683-B85E-04332C6B03A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADEFFFA6-5F7C-4683-B85E-04332C6B03A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADEFFFA6-5F7C-4683-B85E-04332C6B03A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
