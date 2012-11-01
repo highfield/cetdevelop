@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual C# Express 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toolbox.NETMF.Hardware.Infrared.Test", "Toolbox.NETMF.Hardware.Infrared.Test\Toolbox.NETMF.Hardware.Infrared.Test.csproj", "{DBEEF062-C199-4E01-9168-D08F76881A60}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toolbox.NETMF.Hardware.InfraredTX.Test", "Toolbox.NETMF.Hardware.InfraredTX.Test\Toolbox.NETMF.Hardware.InfraredTX.Test.csproj", "{DBEEF062-C199-4E01-9168-D08F76881A60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toolbox.NETMF.Hardware.Infrared", "..\Toolbox.NETMF.Hardware.Infrared\Toolbox.NETMF.Hardware.Infrared.csproj", "{DD412861-B2F8-4CAC-AAE3-AC0726545896}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toolbox.NETMF.Hardware.InfraredTX", "..\Toolbox.NETMF.Hardware.InfraredTX\Toolbox.NETMF.Hardware.InfraredTX.csproj", "{DD412861-B2F8-4CAC-AAE3-AC0726545896}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

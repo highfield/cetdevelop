@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toolbox.NETMF.Hardware.InfraredRX.Test", "Toolbox.NETMF.Hardware.InfraredRX.Test\Toolbox.NETMF.Hardware.InfraredRX.Test.csproj", "{9F81EC27-1473-4385-840A-29A2B743BACF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toolbox.NETMF.Hardware.InfraredRX", "..\Toolbox.NETMF.Hardware.InfraredRX\Toolbox.NETMF.Hardware.InfraredRX.csproj", "{93172C4B-57F4-4839-A9F4-B36C8414CA59}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F81EC27-1473-4385-840A-29A2B743BACF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F81EC27-1473-4385-840A-29A2B743BACF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F81EC27-1473-4385-840A-29A2B743BACF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9F81EC27-1473-4385-840A-29A2B743BACF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F81EC27-1473-4385-840A-29A2B743BACF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F81EC27-1473-4385-840A-29A2B743BACF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{93172C4B-57F4-4839-A9F4-B36C8414CA59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93172C4B-57F4-4839-A9F4-B36C8414CA59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93172C4B-57F4-4839-A9F4-B36C8414CA59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93172C4B-57F4-4839-A9F4-B36C8414CA59}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
