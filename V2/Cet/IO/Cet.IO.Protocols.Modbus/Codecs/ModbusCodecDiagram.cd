@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Cet.NETMF.IO.Protocols.ModbusTcpCodec">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAACAAAAAAAAAQAAhggAEAAAAgAAAAA=</HashCode>
+      <FileName>Protocols\Modbus\ModbusTcpCodec.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Cet.NETMF.IO.Protocols.ModbusCommand">
+    <Position X="3.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AALQAAAAAAEAABAAAAACIAwAAAABARAAAAACJALAoAA=</HashCode>
+      <FileName>Protocols\Modbus\ModbusCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cet.NETMF.IO.Protocols.ModbusCommandCodec">
+    <Position X="6.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAEAAAAAAAAAAIAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Protocols\Modbus\ModbusCommandCodec.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cet.NETMF.IO.Protocols.ModbusTcpCodecReadMultipleDiscretes" Collapsed="true">
+    <Position X="9.5" Y="0.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAEAAAAAAAAAAIAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Protocols\Modbus\Codecs\ModbusTcpCodecReadMultipleDiscretes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cet.NETMF.IO.Protocols.ModbusTcpCodecReadMultipleRegisters" Collapsed="true">
+    <Position X="9.5" Y="2" Width="3" />
+    <InheritanceLine Type="Cet.NETMF.IO.Protocols.ModbusCommandCodec" FixedToPoint="true">
+      <Path>
+        <Point X="7.5" Y="2.18" />
+        <Point X="7.5" Y="2.375" />
+        <Point X="9.5" Y="2.375" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAEAAAAAAAAAAIAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Protocols\Modbus\Codecs\ModbusTcpCodecReadMultipleRegisters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cet.NETMF.IO.Protocols.ModbusTcpCodecWriteMultipleRegisters" Collapsed="true">
+    <Position X="9.5" Y="3.25" Width="3" />
+    <InheritanceLine Type="Cet.NETMF.IO.Protocols.ModbusCommandCodec" FixedToPoint="true">
+      <Path>
+        <Point X="7.5" Y="2.18" />
+        <Point X="7.5" Y="3.625" />
+        <Point X="9.5" Y="3.625" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAEAAAAAAAAAAIAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Protocols\Modbus\Codecs\ModbusTcpCodecWriteMultipleRegisters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cet.NETMF.IO.Protocols.ModbusTcpCodecWriteSingleDiscrete" Collapsed="true">
+    <Position X="9.5" Y="4.5" Width="3" />
+    <InheritanceLine Type="Cet.NETMF.IO.Protocols.ModbusCommandCodec" FixedToPoint="true">
+      <Path>
+        <Point X="7.5" Y="2.18" />
+        <Point X="7.5" Y="4.875" />
+        <Point X="9.5" Y="4.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAEAAAAAAAAAAIAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Protocols\Modbus\Codecs\ModbusTcpCodecWriteSingleDiscrete.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cet.NETMF.IO.Protocols.ModbusTcpCodecWriteSingleRegister" Collapsed="true">
+    <Position X="9.5" Y="5.75" Width="3" />
+    <InheritanceLine Type="Cet.NETMF.IO.Protocols.ModbusCommandCodec" FixedToPoint="true">
+      <Path>
+        <Point X="7.5" Y="2.18" />
+        <Point X="7.5" Y="6.125" />
+        <Point X="9.5" Y="6.125" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAEAAAAAAAAAAIAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Protocols\Modbus\Codecs\ModbusTcpCodecWriteSingleRegister.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

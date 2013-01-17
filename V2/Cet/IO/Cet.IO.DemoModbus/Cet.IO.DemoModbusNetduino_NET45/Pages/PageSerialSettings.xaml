@@ -1,0 +1,128 @@
+﻿<Page 
+    x:Class="Cet.IO.DemoModbusNetduino.PageSerialSettings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    mc:Ignorable="d" 
+    d:DesignHeight="628" d:DesignWidth="1366"
+	Title="Specify RTU settings"
+    >
+
+
+    <Grid
+        ClipToBounds="True"
+        >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+
+        <Image
+            Source="/Images/netduino.png"
+            Stretch="None"
+            Grid.Row="0" Grid.Column="0"
+            Margin="-140,70,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            />
+
+        
+        <StackPanel
+            Grid.Row="0" Grid.Column="1"
+            Margin="40"
+            >
+            <StackPanel
+                Margin="0,20"
+                >
+                <TextBlock
+                    Text="Serial port"
+                    Style="{StaticResource BasicTextStyle}"
+                    />
+
+                <DockPanel
+                    LastChildFill="True"
+                    Margin="0,3"
+                    >
+                    <Button
+                        Click="ButtonPortRefresh"
+                        Margin="20,0,0,0"
+                        DockPanel.Dock="Right"
+                        >
+                        <Image
+                            Source="/Images/old-view-refresh.png"
+                            Width="24"
+                            Height="24"
+                            />
+                    </Button>
+
+                    <ComboBox
+                        x:Name="PART_CboSerialPort"
+                        VerticalAlignment="Center"
+                        />
+                </DockPanel>
+
+                <TextBlock
+                    x:Name="VE_CboSerialPort"
+                    Style="{StaticResource ValidationErrorTextStyle}"
+                    />
+            </StackPanel>
+
+            <StackPanel
+                Margin="0,20"
+                >
+                <TextBlock
+                    Text="Serial settings"
+                    Style="{StaticResource BasicTextStyle}"
+                    />
+
+                <TextBox
+                    Text=""
+                    x:Name="PART_TxtSerialSettings"
+                    Margin="0,3"
+                    />
+
+                <TextBlock
+                    x:Name="VE_TxtSerialSettings"
+                    Style="{StaticResource ValidationErrorTextStyle}"
+                    />
+            </StackPanel>
+
+            <StackPanel
+                Margin="0,20"
+                >
+                <TextBlock
+                    Text="Address"
+                    Style="{StaticResource BasicTextStyle}"
+                    />
+
+                <TextBox
+                    Text=""
+                    x:Name="PART_TxtAddress"
+                    Margin="0,3"
+                    />
+
+                <TextBlock
+                    x:Name="VE_TxtAddress"
+                    Style="{StaticResource ValidationErrorTextStyle}"
+                    />
+            </StackPanel>
+
+        </StackPanel>
+
+
+        <Button
+            Content="Next"
+            Click="ButtonGoNext"
+            Grid.Row="0" Grid.Column="2"
+            Width="120"
+            Height="60"
+            Margin="40"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            />
+        
+    </Grid>
+</Page>

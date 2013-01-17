@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>Cet.IO.Protocols.Modbus_MF41</AssemblyName>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Cet.IO.Protocols</RootNamespace>
+    <ProjectTypeGuids>{b69e3092-b931-443c-abe7-7e7b65f2a37f};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6CB78D84-5892-46E0-9F0D-303542526AE8}</ProjectGuid>
+    <TargetFrameworkVersion>v4.1</TargetFrameworkVersion>
+    <NetMfTargetsBaseDir Condition="'$(NetMfTargetsBaseDir)'==''">$(MSBuildExtensionsPath32)\Microsoft\.NET Micro Framework\</NetMfTargetsBaseDir>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE,MF_FRAMEWORK_VERSION_V4_1</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE,MF_FRAMEWORK_VERSION_V4_1</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(NetMfTargetsBaseDir)$(TargetFrameworkVersion)\CSharp.Targets" />
+  <ItemGroup>
+    <Compile Include="Codecs\ModbusCodecForceMultipleCoils.cs" />
+    <Compile Include="Codecs\ModbusCodecReadMultipleDiscretes.cs" />
+    <Compile Include="Codecs\ModbusCodecReadMultipleRegisters.cs" />
+    <Compile Include="Codecs\ModbusCodecWriteMultipleRegisters.cs" />
+    <Compile Include="Codecs\ModbusCodecWriteSingleDiscrete.cs" />
+    <Compile Include="Codecs\ModbusCodecWriteSingleRegister.cs" />
+    <Compile Include="ModbusClient.cs" />
+    <Compile Include="ModbusCodecBase.cs" />
+    <Compile Include="ModbusCommand.cs" />
+    <Compile Include="ModbusCommandCodec.cs" />
+    <Compile Include="ModbusRtuCodec.cs" />
+    <Compile Include="ModbusServer.cs" />
+    <Compile Include="ModbusTcpCodec.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SPOT.Native">
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Cet.Core\Cet.Core_MF\Cet.Core_MF41.csproj">
+      <Project>{090D2B16-6862-430F-BD15-5BF0177025DD}</Project>
+      <Name>Cet.Core_MF41</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cet.IO\Cet.IO_MF41.csproj">
+      <Project>{A004F986-6FB5-4161-B6AC-CA216F717890}</Project>
+      <Name>Cet.IO_MF41</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Codecs\ModbusCodecDiagram.cd" />
+  </ItemGroup>
+</Project>

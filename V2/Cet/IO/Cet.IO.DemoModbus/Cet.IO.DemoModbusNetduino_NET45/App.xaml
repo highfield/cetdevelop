@@ -1,0 +1,18 @@
+﻿<Application 
+    x:Class="Cet.IO.DemoModbusNetduino.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    StartupUri="MainWindow.xaml"
+    >
+    
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Cet.IO.DemoModbusNetduino_NET45;component/Themes/generic.xaml" />
+                <ResourceDictionary Source="/Cet.IO.DemoModbusNetduino_NET45;component/Themes/ThemeResources.xaml" />
+                <ResourceDictionary Source="/Cet.IO.DemoModbusNetduino_NET45;component/Themes/StandardStyles.xaml" />
+                <ResourceDictionary Source="/Cet.IO.DemoModbusNetduino_NET45;component/Themes/ToggleSwitch.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B7246D3D-63ED-400F-B1F9-3D54EDAB7E38}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cet.IO.DemoModbusNetduino</RootNamespace>
+    <AssemblyName>Cet.IO.DemoModbusNetduino_NET45</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Controls\LedControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Models\Workers\SlaveUdpWorker.cs" />
+    <Compile Include="Models\Workers\SlaveTcpWorker.cs" />
+    <Compile Include="Models\Workers\SlaveRtuWorker.cs" />
+    <Compile Include="Models\Workers\SlaveWorkerBase.cs" />
+    <Compile Include="Models\Workers\MasterUdpWorker.cs" />
+    <Compile Include="Models\Workers\MasterTcpWorker.cs" />
+    <Compile Include="Models\Workers\MasterRtuWorker.cs" />
+    <Compile Include="Models\Workers\MasterWorkerBase.cs" />
+    <Compile Include="Models\Workers\IWorker.cs" />
+    <Compile Include="Models\InputPort.cs" />
+    <Compile Include="Controls\ToggleSwitch\Borders\ClippingBorder.cs" />
+    <Compile Include="Controls\ToggleSwitch\Borders\InnerGlowBorder.cs" />
+    <Compile Include="Controls\ToggleSwitch\Borders\OuterGlowBorder.cs" />
+    <Compile Include="Controls\ToggleSwitch\DropShadowTextBlock.cs" />
+    <Compile Include="Controls\ToggleSwitch\HorizontalToggleSwitch.cs" />
+    <Compile Include="Controls\ToggleSwitch\ToggleSwitchBase.cs" />
+    <Compile Include="Controls\ToggleSwitch\Utils\ActualSizePropertyProxy.cs" />
+    <Compile Include="Controls\ToggleSwitch\Utils\CornerRadiusValueConverter.cs" />
+    <Compile Include="Controls\ToggleSwitch\Utils\HelperExtensions.cs" />
+    <Compile Include="Controls\ToggleSwitch\Utils\ScalarValueConverter.cs" />
+    <Compile Include="Controls\ToggleSwitch\VerticalToggleSwitch.cs" />
+    <Compile Include="Models\AnalogInput.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\LedControl.xaml.cs">
+      <DependentUpon>LedControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Pages\PageNetworkSettings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\PageBoardView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageMediumType.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageSelectRole.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageSerialSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\StandardStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\themeresources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\ToggleSwitch.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\HardwareModel.cs" />
+    <Compile Include="Models\OutputPort.cs" />
+    <Compile Include="Pages\PageNetworkSettings.xaml.cs">
+      <DependentUpon>PageNetworkSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageBoardView.xaml.cs">
+      <DependentUpon>PageBoardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageMediumType.xaml.cs">
+      <DependentUpon>PageMediumType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageSelectRole.xaml.cs">
+      <DependentUpon>PageSelectRole.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageSerialSettings.xaml.cs">
+      <DependentUpon>PageSerialSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\netduino.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\computer-laptop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\green-off-48.png" />
+    <Resource Include="Images\green-on-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\old-go-next.png" />
+    <Resource Include="Images\old-go-previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\old-view-refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Controls\ToggleSwitch\Icons\ToggleSwitch.HorizontalToggleSwitch.Expression.Large.png" />
+    <Resource Include="Controls\ToggleSwitch\Icons\ToggleSwitch.HorizontalToggleSwitch.Expression.Small.png" />
+    <Resource Include="Controls\ToggleSwitch\Icons\ToggleSwitch.HorizontalToggleSwitch.VisualStudio.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Cet.IO.Net\Cet.IO.Net_NET45.csproj">
+      <Project>{ca4e325f-1ae6-40e4-b967-fcd8f5b79448}</Project>
+      <Name>Cet.IO.Net_NET45</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Cet.IO.Protocols.Modbus\Cet.IO.Protocols.Modbus_NET45.csproj">
+      <Project>{df9a2a99-c8d7-4e2f-885a-2f0ff15da26d}</Project>
+      <Name>Cet.IO.Protocols.Modbus_NET45</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Cet.IO.Serial\Cet.IO.Serial_NET45.csproj">
+      <Project>{60da2f5c-22a6-4b29-a35f-863096ca591c}</Project>
+      <Name>Cet.IO.Serial_NET45</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Cet.IO\Cet.IO_NET45.csproj">
+      <Project>{a76d0fef-ede4-4013-b046-96dd0dfa9175}</Project>
+      <Name>Cet.IO_NET45</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

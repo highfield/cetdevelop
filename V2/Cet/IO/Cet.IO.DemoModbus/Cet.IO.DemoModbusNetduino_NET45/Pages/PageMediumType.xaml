@@ -1,0 +1,73 @@
+﻿<Page 
+    x:Class="Cet.IO.DemoModbusNetduino.PageMediumType"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    mc:Ignorable="d" 
+    d:DesignHeight="628" d:DesignWidth="1366"
+	Title="Select communication medium"
+    >
+
+
+    <Grid
+        ClipToBounds="True"
+        >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+
+        <Image
+            Source="/Images/netduino.png"
+            Stretch="None"
+            Grid.Row="0" Grid.Column="0"
+            Grid.RowSpan="3"
+            Margin="-140,70,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            />
+
+
+        <Button
+            Content="TCP"
+            Click="MediumTcpClick"
+            x:Name="BtnTcp"
+            Grid.Row="0" Grid.Column="1"
+            Width="120"
+            Height="60"
+            Margin="40"
+            />
+
+
+        <Button
+            Content="UDP"
+            Click="MediumUdpClick"
+            x:Name="BtnUdp"
+            Grid.Row="1" Grid.Column="1"
+            Width="120"
+            Height="60"
+            Margin="40"
+            />
+
+
+        <Button
+            Content="RTU"
+            Click="MediumRtuClick"
+            x:Name="BtnRtu"
+            Grid.Row="2" Grid.Column="1"
+            Width="120"
+            Height="60"
+            Margin="40"
+            />
+
+    </Grid>
+</Page>

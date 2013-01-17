@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Cet.IO.ServeCommandEventArgs" Collapsed="true">
+    <Position X="8.75" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Comm\Server\ICommServer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cet.IO.ServerCommData">
+    <Position X="8.75" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Comm\Server\ServerCommData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cet.IO.CommDataBase">
+    <Position X="5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAEAAAAAAAgAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Comm\CommDataBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cet.IO.CommResponse">
+    <Position X="5" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAECAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAFA=</HashCode>
+      <FileName>Comm\CommResponse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cet.IO.ClientCommData">
+    <Position X="1.25" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Comm\Client\ClientCommData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Cet.IO.ICommClient">
+    <Position X="1.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAgAAAAA=</HashCode>
+      <FileName>Comm\Client\ICommClient.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Cet.IO.ICommServer">
+    <Position X="8.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAACAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Comm\Server\ICommServer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Delegate Name="Cet.IO.ServeCommandHandler" Collapsed="true">
+    <Position X="8.75" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Comm\Server\ICommServer.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

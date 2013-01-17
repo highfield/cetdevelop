@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows Phone
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cet.IO.DemoModbusNetduino_WP8", "Cet.IO.DemoModbusNetduino_WP8\Cet.IO.DemoModbusNetduino_WP8.csproj", "{ABDD6D2A-56F2-4CD1-98AC-6A11BB18885C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cet.IO_WP8", "..\Cet.IO\Cet.IO_WP8.csproj", "{F7834E5F-0795-49D3-952E-A5493502D035}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cet.IO.Net_WP8", "..\Cet.IO.Net\Cet.IO.Net_WP8.csproj", "{D5070520-2828-4FA5-8D40-23CBEA42362B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cet.IO.Protocols.Modbus_WP8", "..\Cet.IO.Protocols.Modbus\Cet.IO.Protocols.Modbus_WP8.csproj", "{D23490B6-687A-4556-9667-CC12672A7C84}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABDD6D2A-56F2-4CD1-98AC-6A11BB18885C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABDD6D2A-56F2-4CD1-98AC-6A11BB18885C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABDD6D2A-56F2-4CD1-98AC-6A11BB18885C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{ABDD6D2A-56F2-4CD1-98AC-6A11BB18885C}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{ABDD6D2A-56F2-4CD1-98AC-6A11BB18885C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{ABDD6D2A-56F2-4CD1-98AC-6A11BB18885C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABDD6D2A-56F2-4CD1-98AC-6A11BB18885C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABDD6D2A-56F2-4CD1-98AC-6A11BB18885C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{ABDD6D2A-56F2-4CD1-98AC-6A11BB18885C}.Release|ARM.ActiveCfg = Release|Any CPU
+		{ABDD6D2A-56F2-4CD1-98AC-6A11BB18885C}.Release|x86.ActiveCfg = Release|Any CPU
+		{F7834E5F-0795-49D3-952E-A5493502D035}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7834E5F-0795-49D3-952E-A5493502D035}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7834E5F-0795-49D3-952E-A5493502D035}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{F7834E5F-0795-49D3-952E-A5493502D035}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F7834E5F-0795-49D3-952E-A5493502D035}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7834E5F-0795-49D3-952E-A5493502D035}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7834E5F-0795-49D3-952E-A5493502D035}.Release|ARM.ActiveCfg = Release|Any CPU
+		{F7834E5F-0795-49D3-952E-A5493502D035}.Release|x86.ActiveCfg = Release|Any CPU
+		{D5070520-2828-4FA5-8D40-23CBEA42362B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5070520-2828-4FA5-8D40-23CBEA42362B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5070520-2828-4FA5-8D40-23CBEA42362B}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{D5070520-2828-4FA5-8D40-23CBEA42362B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D5070520-2828-4FA5-8D40-23CBEA42362B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5070520-2828-4FA5-8D40-23CBEA42362B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5070520-2828-4FA5-8D40-23CBEA42362B}.Release|ARM.ActiveCfg = Release|Any CPU
+		{D5070520-2828-4FA5-8D40-23CBEA42362B}.Release|x86.ActiveCfg = Release|Any CPU
+		{D23490B6-687A-4556-9667-CC12672A7C84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D23490B6-687A-4556-9667-CC12672A7C84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D23490B6-687A-4556-9667-CC12672A7C84}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{D23490B6-687A-4556-9667-CC12672A7C84}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D23490B6-687A-4556-9667-CC12672A7C84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D23490B6-687A-4556-9667-CC12672A7C84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D23490B6-687A-4556-9667-CC12672A7C84}.Release|ARM.ActiveCfg = Release|Any CPU
+		{D23490B6-687A-4556-9667-CC12672A7C84}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

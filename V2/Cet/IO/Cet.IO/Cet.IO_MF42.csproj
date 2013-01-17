@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>Cet.IO_MF42</AssemblyName>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Cet.IO</RootNamespace>
+    <ProjectTypeGuids>{b69e3092-b931-443c-abe7-7e7b65f2a37f};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{52887F26-5D9F-49F9-9CEC-7233A9DF9934}</ProjectGuid>
+    <TargetFrameworkVersion>v4.2</TargetFrameworkVersion>
+    <NetMfTargetsBaseDir Condition="'$(NetMfTargetsBaseDir)'==''">$(MSBuildExtensionsPath32)\Microsoft\.NET Micro Framework\</NetMfTargetsBaseDir>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(NetMfTargetsBaseDir)$(TargetFrameworkVersion)\CSharp.Targets" />
+  <ItemGroup>
+    <Compile Include="ByteArray\ByteArrayHelpers.Convert.cs" />
+    <Compile Include="ByteArray\ByteArrayHelpers.Convert.NETMF.cs" />
+    <Compile Include="ByteArray\ByteArrayHelpers.Format.cs" />
+    <Compile Include="ByteArray\ByteArrayReader.cs" />
+    <Compile Include="ByteArray\ByteArrayReader.NETMF.cs" />
+    <Compile Include="ByteArray\ByteArrayWriter.cs" />
+    <Compile Include="ByteArray\ByteArrayWriter.NETMF.cs" />
+    <Compile Include="ByteArray\IByteArray.cs" />
+    <Compile Include="Comm\Client\ClientCommData.cs" />
+    <Compile Include="Comm\Client\ClientProgressionEventArgs.cs" />
+    <Compile Include="Comm\Client\ICommClient.cs" />
+    <Compile Include="Comm\CommDataBase.cs" />
+    <Compile Include="Comm\CommResponse.cs" />
+    <Compile Include="Comm\Server\ICommServer.cs" />
+    <Compile Include="Comm\Server\ServerCommData.cs" />
+    <Compile Include="Hashing\HashAlgorithmBase.cs" />
+    <Compile Include="Hashing\HashCrc16.cs" />
+    <Compile Include="Hashing\HashCrc32.cs" />
+    <Compile Include="Hashing\HashCrcCCITT.cs" />
+    <Compile Include="Hashing\HashLrc.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Protocol\IProtocol.cs" />
+    <Compile Include="Protocol\IProtocolCodec.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SPOT.Native">
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Cet.Core\Cet.Core_MF\Cet.Core_MF42.csproj">
+      <Project>{5528FE46-55BA-4D48-BCF4-9A3102CF0DFC}</Project>
+      <Name>Cet.Core_MF42</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
