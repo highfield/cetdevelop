@@ -1,0 +1,14 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="Cet.IO.DemoModbusNetduino_WP" EntryPointType="Cet.IO.DemoModbusNetduino.App" RuntimeVersion="4.7.50308.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="Cet.IO.DemoModbusNetduino_WP" Source="Cet.IO.DemoModbusNetduino_WP.dll" />
+    <AssemblyPart x:Name="Cet.IO.Net_WP7" Source="Cet.IO.Net_WP7.dll" />
+    <AssemblyPart x:Name="Cet.IO.Protocols.Modbus_WP7" Source="Cet.IO.Protocols.Modbus_WP7.dll" />
+    <AssemblyPart x:Name="Cet.IO_WP7" Source="Cet.IO_WP7.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls" Source="Microsoft.Phone.Controls.dll" />
+    <AssemblyPart x:Name="Microsoft.Threading.Tasks" Source="Microsoft.Threading.Tasks.dll" />
+    <AssemblyPart x:Name="Microsoft.Threading.Tasks.Extensions" Source="Microsoft.Threading.Tasks.Extensions.dll" />
+    <AssemblyPart x:Name="Microsoft.Threading.Tasks.Extensions.Phone" Source="Microsoft.Threading.Tasks.Extensions.Phone.dll" />
+    <AssemblyPart x:Name="System.Runtime" Source="System.Runtime.dll" />
+    <AssemblyPart x:Name="System.Threading.Tasks" Source="System.Threading.Tasks.dll" />
+  </Deployment.Parts>
+</Deployment>

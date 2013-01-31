@@ -1,0 +1,9 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="Cet.IO.DemoModbusNetduino_WP8" EntryPointType="Cet.IO.DemoModbusNetduino.App" RuntimeVersion="4.7.50308.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="Cet.IO.DemoModbusNetduino_WP8" Source="Cet.IO.DemoModbusNetduino_WP8.dll" />
+    <AssemblyPart x:Name="Cet.IO.Net_WP8" Source="Cet.IO.Net_WP8.dll" />
+    <AssemblyPart x:Name="Cet.IO.Protocols.Modbus_WP8" Source="Cet.IO.Protocols.Modbus_WP8.dll" />
+    <AssemblyPart x:Name="Cet.IO_WP8" Source="Cet.IO_WP8.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls" Source="Microsoft.Phone.Controls.dll" />
+  </Deployment.Parts>
+</Deployment>

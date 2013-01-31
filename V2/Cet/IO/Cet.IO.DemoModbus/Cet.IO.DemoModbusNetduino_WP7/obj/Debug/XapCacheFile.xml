@@ -1,0 +1,27 @@
+﻿<xapCache source="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbusNetduino_WP7\Bin\Debug\Cet.IO.DemoModbusNetduino_WP.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="1/31/2013 5:20:14 AM">
+  <file source="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbusNetduino_WP7\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="1/13/2013 10:01:47 AM" />
+  <file source="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbusNetduino_WP7\Background.png" archivePath="Background.png" lastWriteTime="1/13/2013 9:18:20 AM" />
+  <file source="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbusNetduino_WP7\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="1/13/2013 9:18:19 AM" />
+  <file source="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbusNetduino_WP7\obj\Debug\Cet.IO.DemoModbusNetduino_WP.dll" archivePath="Cet.IO.DemoModbusNetduino_WP.dll" lastWriteTime="1/31/2013 5:20:13 AM" />
+  <file source="C:\DotNET45\CET\IO\Cet.IO.Net\Bin\Debug\Cet.IO.Net_WP7.dll" archivePath="Cet.IO.Net_WP7.dll" lastWriteTime="1/31/2013 5:20:11 AM" />
+  <file source="C:\DotNET45\CET\IO\Cet.IO.Protocols.Modbus\Bin\Debug\Cet.IO.Protocols.Modbus_WP7.dll" archivePath="Cet.IO.Protocols.Modbus_WP7.dll" lastWriteTime="1/31/2013 5:20:12 AM" />
+  <file source="C:\DotNET45\CET\IO\Cet.IO\Bin\Debug\Cet.IO_WP7.dll" archivePath="Cet.IO_WP7.dll" lastWriteTime="1/31/2013 5:20:11 AM" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v7.1\Libraries\Silverlight\Microsoft.Phone.Controls.dll" archivePath="Microsoft.Phone.Controls.dll" lastWriteTime="7/6/2012 2:40:16 AM" />
+  <file source="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\packages\Microsoft.Bcl.Async.1.0.12-beta\lib\sl4-windowsphone71\Microsoft.Threading.Tasks.dll" archivePath="Microsoft.Threading.Tasks.dll" lastWriteTime="1/13/2013 9:56:56 AM" />
+  <file source="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\packages\Microsoft.Bcl.Async.1.0.12-beta\lib\sl4-windowsphone71\Microsoft.Threading.Tasks.Extensions.dll" archivePath="Microsoft.Threading.Tasks.Extensions.dll" lastWriteTime="1/13/2013 9:56:56 AM" />
+  <file source="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\packages\Microsoft.Bcl.Async.1.0.12-beta\lib\sl4-windowsphone71\Microsoft.Threading.Tasks.Extensions.Phone.dll" archivePath="Microsoft.Threading.Tasks.Extensions.Phone.dll" lastWriteTime="1/13/2013 9:56:56 AM" />
+  <file source="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\packages\Microsoft.Bcl.1.0.11-beta\lib\sl4-windowsphone71\System.Runtime.dll" archivePath="System.Runtime.dll" lastWriteTime="1/13/2013 9:56:56 AM" />
+  <file source="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\packages\Microsoft.Bcl.1.0.11-beta\lib\sl4-windowsphone71\System.Threading.Tasks.dll" archivePath="System.Threading.Tasks.dll" lastWriteTime="1/13/2013 9:56:56 AM" />
+  <file source="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbusNetduino_WP7\Images\cet-leaf.jpg" archivePath="Images\cet-leaf.jpg" lastWriteTime="1/13/2013 9:12:29 AM" />
+  <file source="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbusNetduino_WP7\Images\green-off-48.png" archivePath="Images\green-off-48.png" lastWriteTime="1/13/2013 9:12:29 AM" />
+  <file source="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbusNetduino_WP7\Images\green-on-48.png" archivePath="Images\green-on-48.png" lastWriteTime="1/13/2013 9:12:29 AM" />
+  <file source="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbusNetduino_WP7\Images\netduino_1-8.png" archivePath="Images\netduino_1-8.png" lastWriteTime="1/13/2013 9:12:29 AM" />
+  <file source="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbusNetduino_WP7\Images\netduino_9-13.png" archivePath="Images\netduino_9-13.png" lastWriteTime="1/13/2013 9:12:29 AM" />
+  <file source="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbusNetduino_WP7\Images\netduino_an.png" archivePath="Images\netduino_an.png" lastWriteTime="1/13/2013 9:12:29 AM" />
+  <file source="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbusNetduino_WP7\Images\netduino_small.png" archivePath="Images\netduino_small.png" lastWriteTime="1/13/2013 9:12:29 AM" />
+  <file source="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbusNetduino_WP7\Images\panorama-background.png" archivePath="Images\panorama-background.png" lastWriteTime="1/13/2013 9:12:29 AM" />
+  <file source="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbusNetduino_WP7\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="1/13/2013 9:18:18 AM" />
+  <file source="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbusNetduino_WP7\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="1/31/2013 5:20:13 AM" />
+  <file source="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbusNetduino_WP7\Bin\Debug\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="1/13/2013 9:18:19 AM" />
+  <file source="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbusNetduino_WP7\Bin\Debug\Background.png" archivePath="Background.png" lastWriteTime="1/13/2013 9:18:20 AM" />
+</xapCache>

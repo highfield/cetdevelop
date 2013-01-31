@@ -1,0 +1,13 @@
+C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbus_NET45\bin\Debug\Cet.IO.DemoModbus_NET45.exe
+C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbus_NET45\bin\Debug\Cet.IO.DemoModbus_NET45.pdb
+C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbus_NET45\bin\Debug\Cet.IO.Net_NET45.dll
+C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbus_NET45\bin\Debug\Cet.IO.Protocols.Modbus_NET45.dll
+C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbus_NET45\bin\Debug\Cet.IO.Serial_NET45.dll
+C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbus_NET45\bin\Debug\Cet.IO_NET45.dll
+C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbus_NET45\bin\Debug\Cet.IO.Net_NET45.pdb
+C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbus_NET45\bin\Debug\Cet.IO.Protocols.Modbus_NET45.pdb
+C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbus_NET45\bin\Debug\Cet.IO.Serial_NET45.pdb
+C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbus_NET45\bin\Debug\Cet.IO_NET45.pdb
+C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbus_NET45\obj\x86\Debug\Cet.IO.DemoModbus_NET45.csprojResolveAssemblyReference.cache
+C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbus_NET45\obj\x86\Debug\Cet.IO.DemoModbus_NET45.exe
+C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbus_NET45\obj\x86\Debug\Cet.IO.DemoModbus_NET45.pdb

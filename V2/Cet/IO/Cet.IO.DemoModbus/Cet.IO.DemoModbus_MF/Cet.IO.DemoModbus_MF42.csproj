@@ -46,7 +46,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Cet.Core\Cet.Core_MF\Cet.Core_MF42.csproj">
+    <ProjectReference Include="..\..\..\Core\Core_MF\Cet.Core_MF42.csproj">
       <Project>{5528FE46-55BA-4D48-BCF4-9A3102CF0DFC}</Project>
       <Name>Cet.Core_MF42</Name>
     </ProjectReference>

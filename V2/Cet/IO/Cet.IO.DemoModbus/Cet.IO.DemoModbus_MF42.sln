@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual C# Express 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cet.IO.DemoModbus_MF42", "Cet.IO.DemoModbus_MF\CetIO.DemoModbus_MF42.csproj", "{B34FA129-5FAE-4E28-9026-1151175F1787}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cet.IO.DemoModbus_MF42", "Cet.IO.DemoModbus_MF\Cet.IO.DemoModbus_MF42.csproj", "{B34FA129-5FAE-4E28-9026-1151175F1787}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cet.IO_MF42", "..\Cet.IO\Cet.IO_MF42.csproj", "{52887F26-5D9F-49F9-9CEC-7233A9DF9934}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cet.Core_MF42", "..\..\Cet.Core\Cet.Core_MF\Cet.Core_MF42.csproj", "{5528FE46-55BA-4D48-BCF4-9A3102CF0DFC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cet.Core_MF42", "..\..\Core\Core_MF\Cet.Core_MF42.csproj", "{5528FE46-55BA-4D48-BCF4-9A3102CF0DFC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cet.IO.Net_MF42", "..\Cet.IO.Net\Cet.IO.Net_MF42.csproj", "{95E970AA-B821-4262-B8A5-7853D083D3D2}"
 EndProject

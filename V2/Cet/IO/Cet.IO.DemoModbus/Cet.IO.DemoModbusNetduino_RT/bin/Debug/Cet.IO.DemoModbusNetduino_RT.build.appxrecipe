@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>MARIO-PC</Machine>
+    <WindowsUser>Mario</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbusNetduino_RT\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbusNetduino_RT\bin\Debug\Cet.IO.DemoModbusNetduino_RT.exe">
+      <PackagePath>Cet.IO.DemoModbusNetduino_RT.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbusNetduino_RT\bin\Debug\Cet.IO.DemoModbusNetduino_RT.pdb">
+      <PackagePath>Cet.IO.DemoModbusNetduino_RT.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\DotNET45\CET\IO\Cet.IO.Net_RT\bin\Debug\Cet.IO.Net_RT.pdb">
+      <PackagePath>Cet.IO.Net_RT.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\DotNET45\CET\IO\Cet.IO\bin\Debug\Cet.IO_RT.pdb">
+      <PackagePath>Cet.IO_RT.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\DotNET45\CET\IO\Cet.IO.Protocols.Modbus\bin\Debug\Cet.IO.Protocols.Modbus_RT.pdb">
+      <PackagePath>Cet.IO.Protocols.Modbus_RT.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\DotNET45\CET\IO\Cet.IO.Net_RT\bin\Debug\Cet.IO.Net_RT.dll">
+      <PackagePath>Cet.IO.Net_RT.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\DotNET45\CET\IO\Cet.IO.Protocols.Modbus\bin\Debug\Cet.IO.Protocols.Modbus_RT.dll">
+      <PackagePath>Cet.IO.Protocols.Modbus_RT.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\DotNET45\CET\IO\Cet.IO\bin\Debug\Cet.IO_RT.dll">
+      <PackagePath>Cet.IO_RT.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbusNetduino_RT\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbusNetduino_RT\Assets\SmallLogo.png">
+      <PackagePath>Assets\SmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbusNetduino_RT\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbusNetduino_RT\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbusNetduino_RT\bin\Debug\App.xaml">
+      <PackagePath>App.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbusNetduino_RT\bin\Debug\Common\StandardStyles.xaml">
+      <PackagePath>Common\StandardStyles.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbusNetduino_RT\bin\Debug\MainPage.xaml">
+      <PackagePath>MainPage.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbusNetduino_RT\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

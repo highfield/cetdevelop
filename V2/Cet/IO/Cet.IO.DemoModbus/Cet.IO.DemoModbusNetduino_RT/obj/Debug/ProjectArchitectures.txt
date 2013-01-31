@@ -1,0 +1,6 @@
+C:\DotNET45\CET\IO\Cet.IO.DemoModbus\Cet.IO.DemoModbusNetduino_RT\Cet.IO.DemoModbusNetduino_RT.csproj;neutral
+C:\DotNET45\CET\IO\Cet.IO.Net_RT\Cet.IO.Net_RT.csproj;neutral
+C:\DotNET45\CET\IO\Cet.IO.Protocols.Modbus\Cet.IO.Protocols.Modbus_RT.csproj;neutral
+C:\DotNET45\CET\IO\Cet.IO\Cet.IO_RT.csproj;neutral
+C:\DotNET45\CET\IO\Cet.IO\Cet.IO_RT.csproj;neutral
+C:\DotNET45\CET\IO\Cet.IO\Cet.IO_RT.csproj;neutral
