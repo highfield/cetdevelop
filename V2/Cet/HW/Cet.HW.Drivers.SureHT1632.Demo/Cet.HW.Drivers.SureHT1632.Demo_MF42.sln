@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cet.HW.Drivers.SureHT1632.Demo_MF42", "Cet.HW.Drivers.SureHT1632.Demo\Cet.HW.Drivers.SureHT1632.Demo_MF42.csproj", "{12B4F298-B8CC-4DC1-AE96-065EB53FF54B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cet.HW.Drivers.SureHT1632_MF42", "..\Cet.HW.Drivers.SureHT1632\Cet.HW.Drivers.SureHT1632_MF42.csproj", "{FF3AEC7C-FC40-4EF1-AB3C-4CA02010F2EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cet.HW.GDI_MF42", "..\Cet.HW.GDI\Cet.HW.GDI_MF42.csproj", "{30B810E3-94AD-41F3-BAE1-A6973F71C597}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cet.HW.Drivers.BoostHD44780_MF42", "..\Cet.HW.Drivers.BoostHD44780\Cet.HW.Drivers.BoostHD44780_MF42.csproj", "{EDC3A169-C2F1-420E-8606-28E5C4BCA90D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cet.HW.Drivers.SureHT1632.InvadersDemo_MF42", "Cet.HW.Drivers.SureHT1632.InvadersDemo\Cet.HW.Drivers.SureHT1632.InvadersDemo_MF42.csproj", "{A1CE76E6-E7BE-4B26-B342-E253DE0A2B85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cet.HW.Drivers.SureHT1632.BallsDemo", "Cet.HW.Drivers.SureHT1632.BallsDemo\Cet.HW.Drivers.SureHT1632.BallsDemo.csproj", "{4D524983-C23D-486A-A20D-6C1C549C99AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12B4F298-B8CC-4DC1-AE96-065EB53FF54B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12B4F298-B8CC-4DC1-AE96-065EB53FF54B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12B4F298-B8CC-4DC1-AE96-065EB53FF54B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{12B4F298-B8CC-4DC1-AE96-065EB53FF54B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12B4F298-B8CC-4DC1-AE96-065EB53FF54B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF3AEC7C-FC40-4EF1-AB3C-4CA02010F2EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF3AEC7C-FC40-4EF1-AB3C-4CA02010F2EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF3AEC7C-FC40-4EF1-AB3C-4CA02010F2EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF3AEC7C-FC40-4EF1-AB3C-4CA02010F2EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30B810E3-94AD-41F3-BAE1-A6973F71C597}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30B810E3-94AD-41F3-BAE1-A6973F71C597}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30B810E3-94AD-41F3-BAE1-A6973F71C597}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30B810E3-94AD-41F3-BAE1-A6973F71C597}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDC3A169-C2F1-420E-8606-28E5C4BCA90D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDC3A169-C2F1-420E-8606-28E5C4BCA90D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDC3A169-C2F1-420E-8606-28E5C4BCA90D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDC3A169-C2F1-420E-8606-28E5C4BCA90D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1CE76E6-E7BE-4B26-B342-E253DE0A2B85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1CE76E6-E7BE-4B26-B342-E253DE0A2B85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1CE76E6-E7BE-4B26-B342-E253DE0A2B85}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A1CE76E6-E7BE-4B26-B342-E253DE0A2B85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1CE76E6-E7BE-4B26-B342-E253DE0A2B85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1CE76E6-E7BE-4B26-B342-E253DE0A2B85}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{4D524983-C23D-486A-A20D-6C1C549C99AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D524983-C23D-486A-A20D-6C1C549C99AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D524983-C23D-486A-A20D-6C1C549C99AE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4D524983-C23D-486A-A20D-6C1C549C99AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D524983-C23D-486A-A20D-6C1C549C99AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

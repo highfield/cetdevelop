@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>Cet.HW.Drivers.SureHT1632.InvadersDemo_MF42</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Cet.HW.Drivers.Invaders</RootNamespace>
+    <ProjectTypeGuids>{b69e3092-b931-443c-abe7-7e7b65f2a37f};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A1CE76E6-E7BE-4B26-B342-E253DE0A2B85}</ProjectGuid>
+    <TargetFrameworkVersion>v4.2</TargetFrameworkVersion>
+    <NetMfTargetsBaseDir Condition="'$(NetMfTargetsBaseDir)'==''">$(MSBuildExtensionsPath32)\Microsoft\.NET Micro Framework\</NetMfTargetsBaseDir>
+    <DeployDevice>Netduino</DeployDevice>
+    <DeployTransport>USB</DeployTransport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(NetMfTargetsBaseDir)$(TargetFrameworkVersion)\CSharp.Targets" />
+  <ItemGroup>
+    <Compile Include="Game\AlienBase.cs" />
+    <Compile Include="Game\AlienFont.cs" />
+    <Compile Include="Game\AlienLarge.cs" />
+    <Compile Include="Game\AlienSmall.cs" />
+    <Compile Include="Game\Barrier.cs" />
+    <Compile Include="Game\Bomb.cs" />
+    <Compile Include="Game\GameContext.cs" />
+    <Compile Include="Game\GameStageBase.cs" />
+    <Compile Include="Game\GameStageIntro.cs" />
+    <Compile Include="Game\GameStagePlay.cs" />
+    <Compile Include="Game\InvadersGame.cs" />
+    <Compile Include="Game\InvadersScorer.cs" />
+    <Compile Include="Game\Missile.cs" />
+    <Compile Include="Game\Saucer.cs" />
+    <Compile Include="Game\Ship.cs" />
+    <Compile Include="Game\TopScoreFrugalList.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Program.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SPOT.Hardware" />
+    <Reference Include="Microsoft.SPOT.Hardware.PWM" />
+    <Reference Include="Microsoft.SPOT.Hardware.SerialPort" />
+    <Reference Include="Microsoft.SPOT.Native" />
+    <Reference Include="Microsoft.SPOT.Net" />
+    <Reference Include="SecretLabs.NETMF.Hardware" />
+    <Reference Include="SecretLabs.NETMF.Hardware.Netduino" />
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Cet.HW.Drivers.BoostHD44780\Cet.HW.Drivers.BoostHD44780_MF42.csproj">
+      <Project>{EDC3A169-C2F1-420E-8606-28E5C4BCA90D}</Project>
+      <Name>Cet.HW.Drivers.BoostHD44780_MF42</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Cet.HW.Drivers.SureHT1632\Cet.HW.Drivers.SureHT1632_MF42.csproj">
+      <Project>{FF3AEC7C-FC40-4EF1-AB3C-4CA02010F2EB}</Project>
+      <Name>Cet.HW.Drivers.SureHT1632_MF42</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Cet.HW.GDI\Cet.HW.GDI_MF42.csproj">
+      <Project>{30B810E3-94AD-41F3-BAE1-A6973F71C597}</Project>
+      <Name>Cet.HW.GDI_MF42</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
